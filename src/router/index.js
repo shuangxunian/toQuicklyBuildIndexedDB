@@ -1,3 +1,10 @@
+/*
+ * @Author: yuelin.wang
+ * @Date: 2021-07-09 14:05:19
+ * @LastEditors: yuelin.wang
+ * @LastEditTime: 2021-07-10 16:00:24
+ * @Description: 修改拦截器
+ */
 import Vue from 'vue'
 import Router from 'vue-router'
 import Login from '../components/Login.vue'
@@ -6,6 +13,8 @@ import Welcome from '../components/Welcome.vue'
 import Users from '../components/user/Users.vue'
 import All from '../components/all/All.vue'
 import Add from '../components/add/Add.vue'
+import addsql from '../components/addsql/addsql.vue'
+import fixsql from '../components/fixsql/fixsql.vue'
 
 Vue.use(Router)
 
@@ -21,7 +30,9 @@ const router = new Router({
         { path: '/welcome', component: Welcome },
         { path: '/users', component: Users },
         { path: '/all', component: All },
-        { path: '/add', component: Add }
+        { path: '/add', component: Add },
+        { path: '/addsql', component: addsql },
+        { path: '/fixsql', component: fixsql }
       ]
     }
   ]
@@ -36,8 +47,8 @@ router.beforeEach((to, from, next) => {
 
   if (to.path === '/login') return next()
   // 获取token
-  const tokenStr = window.sessionStorage.getItem('token')
-  if (!tokenStr) return next('/login')
+  const flag = window.sessionStorage.getItem('flag')
+  if (!flag) return next('/login')
   next()
 })
 

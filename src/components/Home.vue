@@ -69,7 +69,11 @@ export default {
     // 获取数据
     getData () {
       this.flag = window.sessionStorage.getItem('flag')
-      this.$router.push('/users')
+      if (this.flag === 0) {
+        this.$router.push('/addsql')
+        this.active = 'addsql'
+      }
+      // this.$router.push('/users')
       // this.flag = 1
       // console.log(this.flag)
     },

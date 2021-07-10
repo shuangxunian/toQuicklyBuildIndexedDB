@@ -2,8 +2,8 @@
  * @Author: yuelin.wang
  * @Date: 2021-07-09 14:05:19
  * @LastEditors: yuelin.wang
- * @LastEditTime: 2021-07-09 14:10:07
- * @Description: 
+ * @LastEditTime: 2021-07-10 15:47:49
+ * @Description: 添加基架
  */
 import Vue from 'vue'
 import App from './App.vue'

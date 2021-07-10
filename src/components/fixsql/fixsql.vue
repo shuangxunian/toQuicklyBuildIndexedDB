@@ -2,8 +2,8 @@
  * @Author: yuelin.wang
  * @Date: 2021-07-09 14:25:53
  * @LastEditors: yuelin.wang
- * @LastEditTime: 2021-07-09 14:29:57
- * @Description: 
+ * @LastEditTime: 2021-07-10 16:06:36
+ * @Description: 添加表属性
 -->
 <template>
   <div>
@@ -15,8 +15,6 @@
 
     <!-- 卡片视图区域 -->
     <el-card>
-      <el-input v-model="input" placeholder="请输入表名"></el-input>
-
     </el-card>
 
   </div>
